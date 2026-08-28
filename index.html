@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暗記アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>暗記アプリ</h1>
+
+        <!-- 学習画面 -->
+        <section id="quizScreen">
+
+            <section class="quiz">
+                <p class="question-label">問題</p>
+                <h2 id="question"></h2>
+
+                <input
+                    type="text"
+                    id="answerInput"
+                    placeholder="答えを入力"
+                    autocomplete="off"
+                >
+
+                <button id="answerButton">答える</button>
+
+                <p id="result"></p>
+
+                <button id="nextButton">次の問題</button>
+            </section>
+
+            <section class="score">
+                <p>正答数</p>
+                <p id="correctCount">0</p>
+            </section>
+
+            <button id="registerScreenButton">単語を登録する</button>
+            <button id="manageScreenButton">単語を管理する</button>
+
+        </section>
+
+
+        <!-- 単語登録画面 -->
+        <section id="registerScreen">
+
+            <h2>単語を登録</h2>
+
+            <label for="questionInput">
+                問題として表示する言葉
+            </label>
+
+            <input
+                type="text"
+                id="questionInput"
+                placeholder="例：apple"
+                autocomplete="off"
+            >
+
+            <label for="correctAnswerInput">
+                正答
+            </label>
+
+            <input
+                type="text"
+                id="correctAnswerInput"
+                placeholder="例：りんご"
+                autocomplete="off"
+            >
+
+            <button id="registerButton">登録する</button>
+
+            <p id="registerResult"></p>
+
+            <button id="backButton">学習画面に戻る</button>
+
+        </section>
+
+
+        <!-- 単語管理画面 -->
+        <section id="manageScreen">
+
+            <h2>単語を管理</h2>
+
+            <div id="wordList"></div>
+
+            <button id="manageBackButton">学習画面に戻る</button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
